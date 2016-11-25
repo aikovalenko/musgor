@@ -1,0 +1,317 @@
+@font-face {
+	font-family: 'roboto';
+	src: url('../fonts/roboto-regular-webfont.eot');
+	src: local('Roboto Regular'), local('Roboto-Regular'), 
+		 url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+		 url('../fonts/roboto-regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../fonts/roboto-medium-webfont.eot');
+	src: local('Roboto Medium'), local('Roboto-Medium'), 
+		 url('../fonts/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+		 url('../fonts/roboto-medium-webfont.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'roboto';
+	src: url('../fonts/roboto-bold-webfont.eot');
+	src: local('Roboto Bold'), local('Roboto-Bold'),
+		 url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/roboto-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+$fontRoboto: 'roboto', Arial, sans-serif;
+
+@font-face {
+	font-family: 'icons';
+	src:url('../fonts/icons.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon {
+	&::before {
+		font-family: 'icons' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+	&-art:before {
+	  content: "\61";
+	}
+	&-buttons:before {
+	  content: "\62";
+	}
+	&-calendar:before {
+	  content: "\63";
+	}
+	&-cart:before {
+	  content: "\64";
+	}
+	&-check:before {
+	  content: "\65";
+	}
+	&-child:before {
+	  content: "\66";
+	}
+	&-clothing:before {
+	  content: "\67";
+	}
+	&-craft:before {
+	  content: "\68";
+	}
+	&-diamond:before {
+	  content: "\69";
+	}
+	&-fb:before {
+	  content: "\6a";
+	}
+	&-frame:before {
+	  content: "\6b";
+	}
+	&-furniture:before {
+	  content: "\6c";
+	}
+	&-heart:before {
+	  content: "\6f";
+	}
+	&-instagram:before {
+	  content: "\71";
+	}
+	&-letter:before {
+	  content: "\72";
+	}
+	&-lifesaver:before {
+	  content: "\73";
+	}
+	&-make:before {
+	  content: "\76";
+	}
+	&-man:before {
+	  content: "\77";
+	}
+	&-mech:before {
+	  content: "\78";
+	}
+	&-money:before {
+	  content: "\79";
+	}
+	&-more:before {
+	  content: "\7a";
+	}
+	&-paint:before {
+	  content: "\41";
+	}
+	&-papers:before {
+	  content: "\42";
+	}
+	&-pet:before {
+	  content: "\43";
+	}
+	&-pinterest:before {
+	  content: "\44";
+	}
+	&-pottery:before {
+	  content: "\46";
+	}
+	&-robot:before {
+	  content: "\47";
+	}
+	&-search:before {
+	  content: "\48";
+	}
+	&-sewing:before {
+	  content: "\4a";
+	}
+	&-talk:before {
+	  content: "\4c";
+	}
+	&-target:before {
+	  content: "\4d";
+	}
+	&-toys:before {
+	  content: "\4e";
+	}
+	&-vk:before {
+	  content: "\4f";
+	}
+	&-woman:before {
+	  content: "\50";
+	}
+	&-transport:before {
+	  content: "\51";
+	}
+	&-security:before {
+	  content: "\45";
+	}
+	&-home:before {
+	  content: "\6d";
+	}
+	&-healthbeauty:before {
+	  content: "\6e";
+	}
+	&-gift:before {
+	  content: "\70";
+	}
+	&-validation-correct:before {
+	  content: "\49";
+	}
+	&-validation-wrong:before {
+	  content: "\52";
+	}
+	&-popup-close:before {
+	  content: "\53";
+	}
+	&-popup-goback:before {
+	  content: "\54";
+	}
+	&-btn-g:before {
+	  content: "\55";
+	}
+	&-btn-vk:before {
+	  content: "\56";
+	}
+	&-previous:before {
+	  content: "\57";
+	}
+	&-next:before {
+	  content: "\58";
+	}
+	&-matbets-logo:before {
+	  content: "\59";
+	}
+	&-date:before {
+	  content: "\5a";
+	}
+	&-community:before {
+	  content: "\30";
+	}
+	&-pin-pinned:before {
+	  content: "\31";
+	}
+	&-pin:before {
+	  content: "\32";
+	}
+	&-datepicker-arrow-left:before {
+	  content: "\33";
+	}
+	&-datepicker-arrow-right:before {
+	  content: "\34";
+	}
+	&-guestlogin:before {
+	  content: "\35";
+	}
+	&-addimage:before {
+	  content: "\36";
+	}
+	&-addimage-plus:before {
+	  content: "\37";
+	}
+	&-twitter:before {
+	  content: "\38";
+	}
+	&-tumblr:before {
+	  content: "\39";
+	}
+	&-facebook:before {
+	  content: "\21";
+	}
+	&-trash:before {
+	  content: "\22";
+	}
+	&-plane:before {
+	  content: "\23";
+	}
+	&-edit:before {
+	  content: "\24";
+	}
+	&-visible-yes:before {
+	  content: "\25";
+	}
+	&-visible-no:before {
+	  content: "\26";
+	}
+	&-account:before {
+	  content: "\27";
+	}
+	&-writemessage:before {
+	  content: "\28";
+	}
+	&-messaging:before {
+	  content: "\29";
+	}
+	&-community-selected:before {
+	  content: "\2a";
+	}
+	&-like-off:before {
+	  content: "\74";
+	}
+	&-like-on:before {
+	  content: "\75";
+	}
+	&-make-off:before {
+	  content: "\2c";
+	}
+	&-useravatar:before {
+	  content: "\2d";
+	}
+	&-package:before {
+	  content: "\2e";
+	}
+	&-article:before {
+	  content: "\4b";
+	}
+	&-askquestion:before {
+	  content: "\2b";
+	}
+	&-namecloud:before {
+	  content: "\2f";
+	}
+	&-organization:before {
+	  content: "\3a";
+	}
+	&-organization-long:before {
+	  content: "\3b";
+	}
+	&-shareideas:before {
+	  content: "\3c";
+	}
+	&-shop-off:before {
+	  content: "\3d";
+	}
+	&-shop-on:before {
+	  content: "\3e";
+	}
+	&-track:before {
+	  content: "\3f";
+	}
+	&-video:before {
+	  content: "\40";
+	}
+	.popup &.focus-point {
+		display: block;
+		font-size: 130px;
+		line-height: 130px;
+		color: #0f9d58;
+		margin: 25px 0 -15px;
+	}
+}
