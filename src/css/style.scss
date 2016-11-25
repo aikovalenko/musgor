@@ -3,4 +3,92 @@
 @import "helpers/mixins";
 @import "helpers/placeholders";
 
+@import "partials/basis";
+@import "partials/icons";
+
+@include fontFace('circle_thin','../fonts/crc15');
+@include fontFace('circle_extrathin','../fonts/crc25');
+@include fontFace('circle_light','../fonts/crc35');
+@include fontFace('circle_regular','../fonts/crc55');
+@include fontFace('circle_bold','../fonts/crc65');
+@include fontFace('circle_extrabold','../fonts/crc75');
+@include fontFace('TelingaterDisplayC','../fonts/TelingaterDisplayC');
+
+@font-face { font-family: "Futura"; src: url("/css/vm/fonts/1309_futurabookc_webfont.eot"); src: url("/css/vm/fonts/1309_futurabookc_webfont.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1312_futurabookc_webfont.woff") format("woff"), url("/css/vm/fonts/1311_futurabookc_webfont.ttf") format("truetype"), url("/css/vm/fonts/1310_futurabookc_webfont.svg#futuralightc") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "Futura"; src: url("/css/vm/fonts/1356_futuralightc.eot"); src: url("/css/vm/fonts/1356_futuralightc.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1359_futuralightc.woff") format("woff"), url("/css/vm/fonts/1358_futuralightc.ttf") format("truetype"), url("/css/vm/fonts/1357_futuralightc.svg#futuralightc") format("svg"); font-weight: 300; font-style: normal; }
+
+@font-face { font-family: 'Futura'; src: url("/css/vm/fonts/1313_futurademic_webfont.eot"); src: url("/css/vm/fonts/1313_futurademic_webfont.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1316_futurademic_webfont.woff") format("woff"), url("/css/vm/fonts/1315_futurademic_webfont.ttf") format("truetype"), url("/css/vm/fonts/1314_futurademic_webfont.svg#futurademicregular") format("svg"); font-weight: 500; font-style: normal; }
+
+@font-face { font-family: 'Futura'; src: url("/css/vm/fonts/1360_futuramediumc_webfont.eot"); src: url("/css/vm/fonts/1360_futuramediumc_webfont.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1363_futuramediumc_webfont.woff") format("woff"), url("/css/vm/fonts/1362_futuramediumc_webfont.ttf") format("truetype"), url("/css/vm/fonts/1361_futuramediumc_webfont.svg#futuramediumcregular") format("svg"); font-weight: 400; font-style: normal; }
+
+@font-face { font-family: 'PF Highway Sans Pro Black'; src: url("/css/vm/fonts/1364_pfhighwaysanspro_black.eot");
+  /* IE9 Compat Modes */
+  src: url("/css/vm/fonts/1364_pfhighwaysanspro_black.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1367_pfhighwaysanspro_black.woff") format("woff"), url("/css/vm/fonts/1366_pfhighwaysanspro_black.ttf") format("truetype"), url("/css/vm/fonts/1365_pfhighwaysanspro_black.svg#25fc4f7b603225c3fb78ae65f32c5ca5") format("svg");
+  /* Legacy iOS */
+  font-style: normal; font-weight: 400; }
+
+
+.gmii_theme { /* Firefox 19+ */ /* Firefox 18- */ }
+.gmii_theme .menu { background: #b54433; }
+.gmii_theme .menu__left:before { border-color: transparent transparent transparent #b54433; }
+.gmii_theme .menu__left:after { border-color: #b54433 transparent transparent transparent; }
+.gmii_theme .menu__left:hover { background: #cf6d5d; }
+.gmii_theme .menu__left:hover:before { border-color: transparent transparent transparent #cf6d5d; }
+.gmii_theme .menu__left:hover:after { border-color: #cf6d5d transparent transparent transparent; }
+.gmii_theme .menu__right:before { border-color: transparent transparent #b54433 transparent; }
+.gmii_theme .menu__right:after { border-color: transparent #b54433 transparent transparent; }
+.gmii_theme .menu__right:hover, .gmii_theme .menu__right.active { background: #cf6d5d; }
+.gmii_theme .menu__right:hover:before, .gmii_theme .menu__right.active:before { border-color: transparent transparent #cf6d5d transparent; }
+.gmii_theme .menu__right:hover:after, .gmii_theme .menu__right.active:after { border-color: transparent #cf6d5d transparent transparent; }
+.gmii_theme.menu-opened .menu__left { background: #cf6d5d; }
+.gmii_theme.menu-opened .menu__left:before { border-color: transparent transparent transparent #cf6d5d; }
+.gmii_theme.menu-opened .menu__left:after { border-color: #cf6d5d transparent transparent transparent; }
+.gmii_theme #ajax-content-item .desc .title, .gmii_theme #ajax-content-item .desc a { color: #b54433; }
+.gmii_theme .lead { color: #b54433; }
+.gmii_theme .btn { border-color: #b54433; color: #b54433; }
+.gmii_theme .btn:hover { background: #b54433; }
+.gmii_theme .scroller-icon { background: #403b35; }
+.gmii_theme .scroller-icon { color: #b54433; border-color: #b54433; }
+.gmii_theme .scroller-icon * { color: #b54433 !important; }
+.gmii_theme .scroller-icon i { background: #b54433; }
+.gmii_theme .count-exp { color: #cf6d5d; }
+.gmii_theme .btn-panorama path, .gmii_theme .append-left path, .gmii_theme .append-right path { fill: #cbb186; }
+.gmii_theme .section__events .section-left { background: rgba(64, 59, 53, 0.95); }
+.gmii_theme .spinner > div { background: #b54433; }
+.gmii_theme .section-left, .gmii_theme .section-full { color: #bab19f; background: #403b35; }
+.gmii_theme .section-left h3, .gmii_theme .section-full h3 { color: #cec4b4; }
+.gmii_theme .section-left h3 span, .gmii_theme .section-full h3 span { border-color: #cec4b4; }
+.gmii_theme .section-left ul li a, .gmii_theme .section-full ul li a { color: #a69a88; }
+.gmii_theme .section-left ul li span, .gmii_theme .section-full ul li span { color: #bab19f; }
+.gmii_theme .section-left .view-more__link, .gmii_theme .section-full .view-more__link { color: #a69a88; }
+.gmii_theme .section-left .article h5, .gmii_theme .section-full .article h5 { color: #bab19f; }
+.gmii_theme .section-full { background: #403b35 !important; }
+.gmii_theme .section-right .section-right-inner .btn { background: rgba(64, 59, 53, 0.8); border-color: #cbb186; }
+.gmii_theme .section-right .section-right-inner .btn:hover { background: rgba(64, 59, 53, 0.95); }
+.gmii_theme .section__contacts .goToSite { color: #cf6d5d; }
+.gmii_theme #ajax-content-list, .gmii_theme #ajax-content-item { background-color: #fff; }
+.gmii_theme .section__collection { background-color: #2c2b2a !important; }
+.gmii_theme aside { background: #cec4b4; color: #80766b; }
+.gmii_theme aside menu li a, .gmii_theme aside ul li a, .gmii_theme aside ol li a { color: #80766b; }
+.gmii_theme aside .lang a { color: #80766b; }
+.gmii_theme aside .lang a.active { color: #e6e0d7; }
+.gmii_theme aside .lang span { color: #e6e0d7; }
+.gmii_theme aside input { background: #e6e0d7; }
+.gmii_theme aside hr { border-bottom-color: #e6e0d7; }
+.gmii_theme .social-links .social { background: #80766b; color: #cec4b4; }
+.gmii_theme ::-webkit-input-placeholder { color: #cec4b4; }
+.gmii_theme ::-moz-placeholder { color: #cec4b4; }
+.gmii_theme :-moz-placeholder { color: #cec4b4; }
+.gmii_theme :-ms-input-placeholder { color: #cec4b4; }
+.gmii_theme .collections-list ul li a, .gmii_theme #ajax-content-item .desc ul { color: #bab19f; }
+.gmii_theme aside menu li a { color: #b54433; }
+.gmii_theme aside menu li a:hover { color: #fff; }
+.gmii_theme .count-exp { color: #998e7d; }
+
+
+
+
+
+
 
