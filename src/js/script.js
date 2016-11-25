@@ -84,6 +84,8 @@ $(document).ready(function() {
         fixedContentPos: false
     });
 
+    setObjectsWidth();
+    showObject();
 });
 
 
@@ -99,6 +101,7 @@ function toggleMenu() {
     $('body').toggleClass('menu-opened');
     $('#sidebar').toggleClass('animate');
 }
+
 function closeMenu() {
     $('body').removeClass('menu-opened');
     $('#sidebar').removeClass('animate');

@@ -6,27 +6,12 @@
 @import "partials/basis";
 @import "partials/icons";
 
-@include fontFace('circle_thin','../fonts/crc15');
-@include fontFace('circle_extrathin','../fonts/crc25');
-@include fontFace('circle_light','../fonts/crc35');
-@include fontFace('circle_regular','../fonts/crc55');
-@include fontFace('circle_bold','../fonts/crc65');
-@include fontFace('circle_extrabold','../fonts/crc75');
-@include fontFace('TelingaterDisplayC','../fonts/TelingaterDisplayC');
+@include fontFace('FuturaBookC','../fonts/FuturaBookC', 'normal');
+@include fontFace('FuturaBookC-Italic','../fonts/FuturaBookC-Italic', 'italic');
+@include fontFace('FuturaDemiC','../fonts/FuturaDemiC', 'normal');
+@include fontFace('FuturaLightC','../fonts/FuturaLightC', 'normal');
+@include fontFace('FuturaLightC-Italic','../fonts/FuturaLightC-Italic', 'italic');
 
-@font-face { font-family: "Futura"; src: url("/css/vm/fonts/1309_futurabookc_webfont.eot"); src: url("/css/vm/fonts/1309_futurabookc_webfont.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1312_futurabookc_webfont.woff") format("woff"), url("/css/vm/fonts/1311_futurabookc_webfont.ttf") format("truetype"), url("/css/vm/fonts/1310_futurabookc_webfont.svg#futuralightc") format("svg"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: "Futura"; src: url("/css/vm/fonts/1356_futuralightc.eot"); src: url("/css/vm/fonts/1356_futuralightc.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1359_futuralightc.woff") format("woff"), url("/css/vm/fonts/1358_futuralightc.ttf") format("truetype"), url("/css/vm/fonts/1357_futuralightc.svg#futuralightc") format("svg"); font-weight: 300; font-style: normal; }
-
-@font-face { font-family: 'Futura'; src: url("/css/vm/fonts/1313_futurademic_webfont.eot"); src: url("/css/vm/fonts/1313_futurademic_webfont.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1316_futurademic_webfont.woff") format("woff"), url("/css/vm/fonts/1315_futurademic_webfont.ttf") format("truetype"), url("/css/vm/fonts/1314_futurademic_webfont.svg#futurademicregular") format("svg"); font-weight: 500; font-style: normal; }
-
-@font-face { font-family: 'Futura'; src: url("/css/vm/fonts/1360_futuramediumc_webfont.eot"); src: url("/css/vm/fonts/1360_futuramediumc_webfont.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1363_futuramediumc_webfont.woff") format("woff"), url("/css/vm/fonts/1362_futuramediumc_webfont.ttf") format("truetype"), url("/css/vm/fonts/1361_futuramediumc_webfont.svg#futuramediumcregular") format("svg"); font-weight: 400; font-style: normal; }
-
-@font-face { font-family: 'PF Highway Sans Pro Black'; src: url("/css/vm/fonts/1364_pfhighwaysanspro_black.eot");
-  /* IE9 Compat Modes */
-  src: url("/css/vm/fonts/1364_pfhighwaysanspro_black.eot?#iefix") format("embedded-opentype"), url("/css/vm/fonts/1367_pfhighwaysanspro_black.woff") format("woff"), url("/css/vm/fonts/1366_pfhighwaysanspro_black.ttf") format("truetype"), url("/css/vm/fonts/1365_pfhighwaysanspro_black.svg#25fc4f7b603225c3fb78ae65f32c5ca5") format("svg");
-  /* Legacy iOS */
-  font-style: normal; font-weight: 400; }
 
 
 .gmii_theme { /* Firefox 19+ */ /* Firefox 18- */ }
@@ -87,8 +72,161 @@
 .gmii_theme .count-exp { color: #998e7d; }
 
 
+.musgor_theme {
+  .section--background {
+    background-color: #31312f;
+  }
+}
 
+.section__inner--padding {
+  padding-top: 134px;
+  padding-left: 174px;
+}
 
+.section--intro__inner {
+  display: flex;
+  flex-flow: column;
+  align-content: stretch;
+}
+.section--intro__header {
+  display: flex;
+  padding-top: 134px;
+  padding-left: 114px;
+  .logo {
+    margin-right: 143px;
+  }
+  h1 {
+    display: block;
+    max-width: 500px;
+    font-family: 'FuturaDemiC';
+    font-size: 60px;
+    //letter-spacing: 0.6em;
+    text-transform: uppercase;
+    color: #fff;
+    span {
+      //letter-spacing: 4.5px;
+    }
+  }
+  .panorama {
+    img {
+      width: 100%;
+    }
 
+  }
+}
+.section_panorama {
+  text-align: center;
+}
+.map {
+  flex: 2;
+  padding-top: 40px;
+  padding-bottom: 150px;
+  padding-left: 80px;
+  padding-right: 80px;
+  .map_inner {
+    height: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .objects {
+      position: relative;
+      height: 100%;
+      margin: 0 auto;
+      z-index: 10;
+    }
+    .object {
+      position: absolute;
+      &:hover {
+        cursor: pointer;
+      }
+      .name {
+        opacity: 0;
+        z-index: -1;
+        transition: all .2s ease;
+        width: 200px;
+        position: absolute;
+        font-size: 16px;
+        color: white;
+      }
+    }
+    .object0 {
+      width: 13%;
+      height: 46%;
+      top: 24%;
+      left: 48%;
+      .building {
+        height: 100%;
+        width: 100%;
+        transform: rotateX(50deg) rotateY(-12deg) rotateZ(-25deg);
+        border: 3px solid #000;
+      }
+      .name {
+        bottom: 5%;
+        left: 113%;
+      }
+    }
+    .object1 {
+      width: 8%;
+      height: 21%;
+      top: 54%;
+      left: 44%;
+      .building {
+        height: 100%;
+        width: 100%;
+        transform: rotateX(50deg) rotateY(-12deg) rotateZ(-25deg);
+        border: 3px solid #000;
+      }
+      .name {
+        bottom: 5%;
+        left: 113%;
+      }
+    }
+    .map-object0 {
+      opacity: 0;
+      z-index: -1;
+      transition: all .2s ease;
+    }
+  }
 
-
+}
+.show {
+  opacity: 1 !important;
+  z-index: 1 !important;
+  transition: all .2s ease !important;
+}
+@media screen and (max-width: 1600px) {
+  .section__inner--padding {
+    padding-top: 100px;
+    padding-left: 100px;
+  } .section--intro__header {
+    padding-top: 100px;
+    padding-left: 60px;
+  }
+  .section--intro__header {
+    .logo {
+      margin-right: 70px;
+    }
+    h1 {
+      max-width: 330px;
+      font-size: 45px;
+      line-height: 45px;
+    }
+    .panorama {
+      width: 300px;
+    }
+  }
+  .map {
+    flex: 2;
+    padding-top: 0;
+    padding-bottom: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
