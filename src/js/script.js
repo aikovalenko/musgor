@@ -51,12 +51,16 @@ $(document).ready(function() {
 //    autoScrolling: false,
         verticalCentered: false,
         onLeave: function(index, nextIndex, direction){
+            var scroller = $('.scroller-icon');
             if(direction =='down'){
-                $('.scroller-icon').addClass('down').removeClass('down')
+                scroller.addClass('down-animation');
             }
             else if(direction == 'up'){
-                $('.scroller-icon').addClass('up').removeClass('up')
+                scroller.addClass('up-animation');
             }
+            setTimeout(function(){
+                scroller.removeClass('up-animation').removeClass('down-animation');
+            }, 1000);
         },
         afterLoad: function(anchorLink, index){
             if(anchorLink == 'contacts'){
@@ -65,6 +69,7 @@ $(document).ready(function() {
             else {
                 $('#map').hide().siblings('.spinner').removeClass('hide')
             }
+            $('.scroller-icon i').addClass("up-down-animation");
             //
             // if(anchorLink == 'intro'){
             //     vid.play();
