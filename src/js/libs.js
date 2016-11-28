@@ -2,6 +2,7 @@
 //= ../libs/fullpage.js/dist/jquery.fullpage.js
 //= ../libs/mCustomScrollbar/jquery.mCustomScrollbar.min.js
 //= ../libs/magnific-popup/dist/jquery.magnific-popup.js
+//= ../libs/slick-carousel/slick/slick.js
 
 function setObjectsWidth() {
     var oW = $(".map-main").width();
@@ -40,4 +41,16 @@ function showObject() {
         $('.map-object').removeClass('show');
         $(".name").removeClass('show');
     })
+}
+
+function equalsColumns() {
+    var  maxHeight = -1;
+    var  elems = document.getElementsByClassName("equal_height");
+
+    for( var i = 0; i < elems.length; i++ ) {
+        maxHeight = maxHeight > elems[i].offsetHeight ? maxHeight : elems[i].offsetHeight;
+    }
+    for( var i = 0; i < elems.length; i++ ) {
+        elems[i].style.height = maxHeight + "px";
+    }
 }

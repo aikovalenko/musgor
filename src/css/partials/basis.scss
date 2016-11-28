@@ -260,7 +260,7 @@ html.loaded .main-spinner { -ms-filter: "progid:DXImageTransform@mixin Microsoft
 .btn-panorama .append-right { left: 100%; margin-left: -8px; }
 .btn-panorama .append-right svg { float: left; -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); -ms-transform: rotateY(180deg); -o-transform: rotateY(180deg); transform: rotateY(180deg); }
 
-.scroller-icon { height: 62px; width: 32px; border: 4px solid #fff; position: fixed; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; background-clip: padding-box; -webkit-transition: left 0.5s ease; -moz-transition: left 0.5s ease; -o-transition: left 0.5s ease; -ms-transition: left 0.5s ease; transition: left 0.5s ease; text-align: center; padding: 10px 3px; left: 0; right: 0; bottom: 115px; z-index: 3; margin-left: -16px; font-size: 0; color: #fff; -webkit-transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; -moz-transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; -o-transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; -ms-transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; background: transparent !important; }
+.scroller-icon { height: 62px; width: 32px; border: 4px solid #fff; position: fixed; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; background-clip: padding-box; -webkit-transition: left 0.5s ease; -moz-transition: left 0.5s ease; -o-transition: left 0.5s ease; -ms-transition: left 0.5s ease; transition: left 0.5s ease; text-align: center; padding: 10px 3px; left: 0; right: 0; bottom: 115px; z-index: 3; margin-left: -16px; font-size: 0; color: #fff; -webkit-transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; -moz-transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; -o-transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; -ms-transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; transition: background 0.5s ease, border-color 0.5s ease, left 0.5s ease; background: transparent; }
 .scroller-icon:before, .scroller-icon:after { position: absolute; font-family: 'vmuseum'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 20px; left: -0px; right: 0; margin: 0 auto; width: 20px; z-index: 2; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; text-shadow: 0 1px 1px #433d32, 0 2px 1px #433d32, 0 3px 1px #433d32, 0 3px 1px #433d32, 1px 0px 1px #433d32, 2px 0px 1px #433d32, 2px 0px 1px #433d32, 0 -1px 1px #433d32, 0 -2px 1px #433d32, 0 -3px 1px #433d32, 0 -3px 1px #433d32; }
 .scroller-icon:after { content: "\e60e"; bottom: 100%; margin-bottom: 9px; }
 .scroller-icon:before { content: "\e60d"; top: 100%; margin-top: 8px; }
@@ -270,8 +270,6 @@ html.loaded .main-spinner { -ms-filter: "progid:DXImageTransform@mixin Microsoft
 .scroller-icon.loaded i { -webkit-transform: translate(0, 10px); -moz-transform: translate(0, 10px); -ms-transform: translate(0, 10px); -o-transform: translate(0, 10px); transform: translate(0, 10px); }
 .scroller-icon:before, .scroller-icon:after { text-shadow: none !important; }
 
-.fp-viewing-intro .scroller-icon, .fp-viewing-panorama .scroller-icon, .fp-viewing-media .scroller-icon { left: 50% !important; right: 0; bottom: 115px; background: transparent !important; }
-.fp-viewing-intro .scroller-icon:before, .fp-viewing-intro .scroller-icon:after, .fp-viewing-panorama .scroller-icon:before, .fp-viewing-panorama .scroller-icon:after, .fp-viewing-media .scroller-icon:before, .fp-viewing-media .scroller-icon:after { text-shadow: none !important; }
 
 .count-exp { font-size: 24px; font-weight: 500; margin-top: 40px; margin-bottom: 0; -ms-filter: "progid:DXImageTransform@mixin Microsoft@mixin Alpha(Opacity=${iefactor})"; filter: "alpha(opacity=(${iefactor}))"; -moz-opacity: 0.6; -khtml-opacity: 0.6; opacity: 0.6; }
 
@@ -293,7 +291,7 @@ aside .mCSB_scrollTools { top: 5px; bottom: 5px; }
 hr { border: 0; border-bottom: 1px solid; }
 
 form { margin: 50px 0; }
-form input { border: 0; width: 100%; color: #fff; font-size: 25px; font-family: 'FuturaBookC', sans-serif; font-weight: normal; padding: 10px 15px; }
+form input, form textarea { border: 0; width: 100%; color: #fff; font-size: 25px; font-family: 'FuturaBookC', sans-serif; font-weight: normal; padding: 10px 15px; }
 
 .scroller { height: 100%; }
 
@@ -322,10 +320,10 @@ form input { border: 0; width: 100%; color: #fff; font-size: 25px; font-family: 
 .section__contacts .address { font-weight: 500; font-size: 30px; color: #fff; }
 .section__contacts ul { color: #fff; font-size: 24px; }
 .section__contacts ul li { font-size: 24px; line-height: 30px; }
-.section__contacts ul li span { font-size: 24px; display: inline-block; margin-right: 5px; }
+.section__contacts ul li span { font-size: 24px; margin-right: 5px; }
 .section__contacts ul li em { font-style: normal; }
 .section__contacts ul li .tel { white-space: nowrap; }
-.section__contacts ul li a { color: #fff !important; font-weight: normal; font-size: 24px; }
+.section__contacts ul li a { color: #fff; font-weight: normal; font-size: 24px; }
 .section__contacts ul li a:hover { text-decoration: underline; }
 .section__contacts .section-right-inner { padding: 0; background: #ddd; }
 .section__contacts .goToSite { font-size: 24px; text-decoration: underline; margin-top: 38px; display: inline-block; }
@@ -380,15 +378,15 @@ form input { border: 0; width: 100%; color: #fff; font-size: 25px; font-family: 
 .media-list:after, .media-list:before { content: ""; display: table; clear: both; }
 .media-list li { float: none; width: 33.3333%; padding: 0 25px 50px; vertical-align: top; display: inline-block; line-height: normal !important; margin-top: 0 !important; }
 .media-list li a { display: block; }
-.media-list li a:hover .video-preview:after { background: url(/images/vm/1480_play_hover.png) no-repeat; }
+//.media-list li a:hover .video-preview:after { background: url(/images/vm/1480_play_hover.png) no-repeat; }
 .media-list .video-preview { font-size: 0; position: relative; }
-.media-list .video-preview:after { content: ''; background: url(/images/vm/1479_play.png) no-repeat; width: 67px; height: 67px; position: absolute; left: 0; right: 0; top: 50%; margin: 0 auto; margin-top: -33px; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
+//.media-list .video-preview:after { content: ''; background: url(/images/vm/1479_play.png) no-repeat; width: 67px; height: 67px; position: absolute; left: 0; right: 0; top: 50%; margin: 0 auto; margin-top: -33px; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
 .media-list .video-preview img { width: 100%; }
 .media-list .desc { position: relative; padding: 15px 52px 15px 18px; background: #5a5244; color: #bab19f; height: 80px; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
-.media-list .desc .title { font-size: 18px; line-height: 16px; font-weight: normal; display: block; color: #bab19f; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
+.media-list .desc .title { font-size: 18px; font-weight: normal; display: block; color: #bab19f; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
 .media-list .desc .time { font-size: 16px; position: absolute; right: 8px; bottom: 6px; color: #bab19f !important; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
 .media-list a:hover .desc { background: #e1a71c; }
-.media-list a:hover .desc .title, .media-list a:hover .desc .time { color: #433d32 !important; }
+.media-list a:hover .desc .title, .media-list a:hover .desc .time { color: #433d32; }
 
 @media (max-width: 1834px) { .collections-list ul li { width: 33.3333%; } }
 @media (max-width: 1480px) { .section-left .scroller .mCSB_container { padding: 120px 60px 100px 80px; }
@@ -423,8 +421,8 @@ form input { border: 0; width: 100%; color: #fff; font-size: 25px; font-family: 
   .view-more__link { margin-top: 30px; font-size: 16px; } }
 .mfp-bg { background: #312d25; -ms-filter: "progid:DXImageTransform@mixin Microsoft@mixin Alpha(Opacity=${iefactor})"; filter: "alpha(opacity=(${iefactor}))"; -moz-opacity: 0.96; -khtml-opacity: 0.96; opacity: 0.96; }
 
-.mfp-close { font-size: 0px; height: 60px !important; font-weight: 200; font-family: 'FuturaBookC', sans-serif; top: 0px !important; right: -60px !important; width: 60px !important; background: #5a5244 !important; padding: 15px 12px !important; }
-.mfp-close:before { content: '+'; font-size: 70px; line-height: 34px; display: inline-block; position: relative; left: -2px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
+.mfp-close { font-size: 0px; height: 60px !important; font-weight: 200; font-family: 'FuturaBookC', sans-serif; top: 0px !important; right: -60px !important; width: 60px !important; background: #5a5244; padding: 15px 12px !important; }
+.mfp-close:before { content: '+'; font-size: 66px; line-height: 34px; display: inline-block; position: relative; left: -6px; top: 2px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
 
 @media (max-width: 1200px) { .media-list li { width: 50%; } }
 @media (max-width: 1100px) { #ajax-content-list.show { padding: 100px 30px 50px 30px; } }

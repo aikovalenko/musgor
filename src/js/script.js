@@ -18,14 +18,14 @@ $(window).on('resize', function() {
 
     $('.section-right').css({
         paddingLeft: sL
-    })
+    });
     if (wW < 880 ) {
-        $('.scroller-icon').css({
+        $('.js-scroller-icon').css({
             left: sL + 40
         })
     }
     else {
-        $('.scroller-icon').css({
+        $('.js-scroller-icon').css({
             left: sL + 60
         })
     }
@@ -45,13 +45,14 @@ $(document).ready(function() {
         scrollingSpeed: 1000,
         easingCss3: 'ease',
 //    anchors: ['intro', 'panorama', 'collections', 'media',  'events', 'contacts'], //dpni
-        anchors: ['intro', 'panorama', 'media',  'contacts'], //all gmii
+        anchors: ['intro', 'panorama', 'info', 'media', 'news', 'feedback',  'contacts'], //all gmii
         menu: '#menu',
+        // normalScrollElements: '.mfp-wrap',
         resize : false,
 //    autoScrolling: false,
         verticalCentered: false,
         onLeave: function(index, nextIndex, direction){
-            var scroller = $('.scroller-icon');
+            var scroller = $('.js-scroller-icon');
             if(direction =='down'){
                 scroller.addClass('down-animation');
             }
@@ -69,7 +70,7 @@ $(document).ready(function() {
             else {
                 $('#map').hide().siblings('.spinner').removeClass('hide')
             }
-            $('.scroller-icon i').addClass("up-down-animation");
+            $('.js-scroller-icon i').addClass("up-down-animation");
             //
             // if(anchorLink == 'intro'){
             //     vid.play();
@@ -86,11 +87,159 @@ $(document).ready(function() {
         mainClass: 'mfp-fade',
         removalDelay: 160,
         preloader: false,
-        fixedContentPos: false
+        fixedContentPos: false,
+        enableEscapeKey: false,
+        callbacks: {
+            ajaxContentAdded: function() {
+                $.fn.fullpage.setAllowScrolling(false);
+                $('.ajax-modal').find('.mfp-close').on('click', function (e) {
+                    e.preventDefault();
+                    $.magnificPopup.close();
+                    $.fn.fullpage.setAllowScrolling(true);
+                });
+            }
+        }
     });
+    // $('#map').on('mouseenter', function() {
+    //     $.fn.fullpage.setAllowScrolling(false);
+    //
+    // }).on('mouseleave', function() {
+    //     $.fn.fullpage.setAllowScrolling(true);
+    // });
+    $('a[data-ajax-on-modal]').magnificPopup({
+        type: 'ajax',
+        tLoading: '<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>',
+        mainClass: 'ajax-modal',
+        closeOnBgClick: false,
+        enableEscapeKey: false,
+
+        callbacks: {
+            ajaxContentAdded: function() {
+                $.fn.fullpage.setAllowScrolling(false);
+                $('.gallery').slick({
+                    arrows: false,
+                    dots: true,
+                    infinite: true,
+                    slidesToShow: 1,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    speed: 1000,
+                    fade: true
+                });
+                $('.ajax-modal').find('.mfp-close').on('click', function (e) {
+                    e.preventDefault();
+                    $.magnificPopup.close();
+                    $.fn.fullpage.setAllowScrolling(true);
+                });
+            }
+        }
+    });
+    (function() {
+
+        var app = {
+
+            initialize : function () {
+                this.setUpListeners();
+            },
+
+            setUpListeners: function () {
+                $('form#feedback-form').on('submit',app.submitForm);
+                $('form#feedback-form').on('keydown', '.has-error', app.removeError);
+            },
+
+            submitForm: function (e) {
+                e.preventDefault();
+
+                var form = $(this);
+                submitBtn = form.find('button[type="submit"]');
+
+
+                if ( app.validateForm(form) === false) return false;
+
+                var str = form.serialize();
+
+                // против повторного нажатия
+                submitBtn.attr({disabled: 'disabled'});
+
+                $.ajax({
+                    type: "POST",
+                    url: "/inc/feedback.php",// обычно тут php файл
+                    data: str
+                }).done(function(msg) {
+                    var message = $('.message');
+                    if(msg == 'OK') {
+                        result = '<div class="success-msg">Спасибо, Ваша заявка успешно принята<br>Мы свяжемся с Вами в ближайщее время</div>';
+                        form.html(result);
+                    } else {
+                        message.html(msg);
+                    }
+                }).always(function(){
+                    submitBtn.removeAttr("disabled");
+                })
+            },
+
+
+            validateForm: function (form){
+
+                var inputs = form.find('input.validate'),
+                    textareas = form.find('textarea.validate'),
+                    valid = true;
+
+
+                $.each(inputs, function(index, val) {
+                    var input = $(val),
+                        val = input.val(),
+                        inputGroup = input.parents('.input-group'),
+                        err = inputGroup.find('.error-msg'),
+                        textError = ' (пожалуйста, заполните это поле)';
+
+                    if(val.length === 0){
+                        input.addClass('has-error').removeClass('has-success');
+                        err.html(textError);
+                        valid = false;
+                    }else{
+                        input.removeClass('has-error').addClass('has-success');
+                        err.html('');
+
+                    }
+                });
+
+                $.each(textareas, function(index, val) {
+                    var textarea = $(val),
+                        val = textarea.val(),
+                        inputGroup = textarea.parents('.input-group'),
+                        textError = ' (пожалуйста, не отправляйте пустое сообщение)',
+                        err = inputGroup.find('.error-msg');
+
+                    if(val.length === 0 || val.length < 1){
+                        textarea.addClass('has-error').removeClass('has-success');
+                        err.html(textError);
+                        valid = false;
+                    } else{
+                        textarea.removeClass('has-error').addClass('has-success');
+                        err.html('');
+                    }
+                });
+
+                return valid;
+
+            },
+
+
+            removeError: function() {
+                $(this).removeClass('has-error').find('input');
+                $(this).removeClass('has-error').find('textarea');
+            }
+
+        }
+
+        app.initialize();
+
+    }());
 
     setObjectsWidth();
     showObject();
+    equalsColumns();
 });
 
 
