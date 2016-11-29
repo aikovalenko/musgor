@@ -6,11 +6,12 @@
 @import "partials/basis";
 @import "partials/icons";
 
-@include fontFace('FuturaBookC','../fonts/FuturaBookC', 'normal');
-@include fontFace('FuturaBookC-Italic','../fonts/FuturaBookC-Italic', 'italic');
-@include fontFace('FuturaDemiC','../fonts/FuturaDemiC', 'normal');
-@include fontFace('FuturaLightC','../fonts/FuturaLightC', 'normal');
-@include fontFace('FuturaLightC-Italic','../fonts/FuturaLightC-Italic', 'italic');
+@include fontFace('FuturaBookC','/fonts/futurabookc', 'normal');
+@include fontFace('FuturaBookC-Italic','/fonts/futurabookcitalic', 'italic');
+@include fontFace('FuturaDemiC','/fonts/futurademic', 'normal');
+@include fontFace('FuturaLightC','/fonts/futuralightc', 'normal');
+@include fontFace('FuturaLightC-Italic','/fonts/futuralightcitalic', 'italic');
+@include fontFace('icomoon','/fonts/icomoon', 'italic');
 
 
 
@@ -61,7 +62,7 @@
 .gmii_theme aside .lang span { color: #e6e0d7; }
 .gmii_theme aside input { background: #e6e0d7; }
 .gmii_theme aside hr { border-bottom-color: #e6e0d7; }
-.gmii_theme .social-links .social { background: #80766b; color: #cec4b4; }
+.gmii_theme .social-links .social { color: #cec4b4; }
 .gmii_theme ::-webkit-input-placeholder { color: #cec4b4; }
 .gmii_theme ::-moz-placeholder { color: #cec4b4; }
 .gmii_theme :-moz-placeholder { color: #cec4b4; }
@@ -74,10 +75,13 @@
 
 .musgor_theme {
   background: #31312f;
+  .section-left, .section-full { color: #bab19f; }
+  .section-left ul li span, .section-full ul li span { color: #bab19f;}
   aside {
     background: #464645;
   }
-  aside menu li a, .gmii_theme aside ul li a, .gmii_theme aside ol li a { color: #89a83c; font-family: 'FuturaDemiC'; }
+  aside menu li a, .gmii_theme aside ul li a, aside ol li a { color: #89a83c; font-family: 'FuturaDemiC'; }
+
   .section--background {
     background-color: #31312f;
   }
@@ -136,7 +140,7 @@
     color: #84a430;
   }
   .section_panorama {
-    background-image: url("../img/des/panorama-back.jpg");
+    background-image: url("/images/des/panorama_back.jpg");
   }
 
   .btn-panorama path, .append-left path, .append-right path { fill: #768943; }
@@ -182,7 +186,7 @@
     background-color: #31312f;
   }
 }
-.fp-viewing-intro .scroller-icon, .fp-viewing-panorama .scroller-icon, .fp-viewing-media .scroller-icon, .fp-viewing-info .scroller-icon, .fp-viewing-news .scroller-icon, .fp-viewing-feedback .scroller-icon { left: 50% !important; right: 0; bottom: 115px; background: transparent !important; }
+.fp-viewing-city .scroller-icon, .fp-viewing-panorama .scroller-icon, .fp-viewing-media .scroller-icon, .fp-viewing-building .scroller-icon, .fp-viewing-news .scroller-icon, .fp-viewing-feedback .scroller-icon { left: 50% !important; right: 0; bottom: 115px; background: transparent !important; }
 .fp-viewing-intro .scroller-icon:before, .fp-viewing-intro .scroller-icon:after, .fp-viewing-panorama .scroller-icon:before, .fp-viewing-panorama .scroller-icon:after, .fp-viewing-media .scroller-icon:before, .fp-viewing-media .scroller-icon:after { text-shadow: none !important; }
 .fp-viewing-contacts .scroller-icon {
   color: #fff;
@@ -508,7 +512,7 @@
   width: 60px;
   height: 43px;
   margin: auto;
-  background-image: url(../img/des/youtube.svg);
+  background-image: url(/images/des/youtube.svg);
   background-size: cover;
   transition: .4s;
 }
@@ -942,6 +946,9 @@
           }
         }
       }
+    }
+    .mfp-preloader {
+      z-index: 1100;
     }
   }
 }

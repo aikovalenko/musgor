@@ -28,7 +28,7 @@ var path = {
 		html: 'dist/',
 		js: 'dist/js/',
 		css: 'dist/css/',
-		img: 'dist/img/',
+		img: 'dist/images/',
 		fonts: 'dist/fonts/',
 		raw: 'dist/'
 	},
@@ -36,7 +36,7 @@ var path = {
 		html: 'build/',
 		js: 'build/js/',
 		css: 'build/css/',
-		img: 'build/img/',
+		img: 'build/images/',
 		fonts: 'build/fonts/',
 		raw: 'build/'
 	},
@@ -44,7 +44,7 @@ var path = {
 		html: 'src/*.html',
 		js: 'src/js/**/*.js',
 		style: 'src/css/*.scss',
-		img: 'src/img/**/*.*',
+		img: 'src/images/**/*.*',
 		fonts: 'src/fonts/**/*.*',
 		raw: 'src/raw/**/*.*'
 	},
@@ -52,7 +52,7 @@ var path = {
 		html: 'src/**/*.html',
 		js: 'src/js/**/*.js',
 		style: 'src/css/**/*.scss',
-		img: 'src/img/**/*.*',
+		img: 'src/images/**/*.*',
 		fonts: 'src/fonts/**/*.*',
 		raw: 'src/raw/**/*.*'
 	},

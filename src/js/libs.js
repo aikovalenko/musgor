@@ -1,8 +1,8 @@
-//= ../libs/jquery/dist/jquery.js
-//= ../libs/fullpage.js/dist/jquery.fullpage.js
+//= ../libs/jquery/dist/jquery.min.js
+//= ../libs/fullpage.js/dist/jquery.fullpage.min.js
 //= ../libs/mCustomScrollbar/jquery.mCustomScrollbar.min.js
-//= ../libs/magnific-popup/dist/jquery.magnific-popup.js
-//= ../libs/slick-carousel/slick/slick.js
+//= ../libs/magnific-popup/dist/jquery.magnific-popup.min.js
+//= ../libs/slick-carousel/slick/slick.min.js
 
 function setObjectsWidth() {
     var oW = $(".map-main").width();
