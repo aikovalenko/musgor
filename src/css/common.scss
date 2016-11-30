@@ -79,15 +79,25 @@
   .section-left ul li span, .section-full ul li span { color: #bab19f;}
   aside {
     background: #464645;
+    em {
+      a {
+         color: #fff !important;
+      }
+    }
   }
   aside menu li a, .gmii_theme aside ul li a, aside ol li a { color: #89a83c; font-family: 'FuturaDemiC'; }
-
+  aside .lang a { color: #80766b; }
+  aside .lang a.active { color: #e6e0d7; }
+  aside .lang span { color: #e6e0d7; }
+  aside input { background: #e6e0d7; }
+  aside hr { border-bottom-color: #e6e0d7; }
+  .social-links .social { color: #cec4b4; }
   .section--background {
     background-color: #31312f;
   }
   .lang {color: #89a83c; font-family: 'FuturaDemiC';}
   aside hr { border-bottom-color: #89a83c; }
-  aside ul {
+  aside ul a {
     font-family: 'FuturaBookC';
     color: #a09e95;
   }
@@ -950,5 +960,11 @@
     .mfp-preloader {
       z-index: 1100;
     }
+  }
+}
+@media screen and (max-aspect-ratio: 15/10) {
+  .map .map_inner img {
+    width: 100%;
+    height: auto;
   }
 }
