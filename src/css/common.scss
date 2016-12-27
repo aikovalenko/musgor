@@ -728,6 +728,7 @@
         }
         .text-scroll {
           overflow-y: inherit;
+          overflow-x: hidden;
           height: 100%;
           padding-bottom: 100px;
         }
@@ -974,5 +975,101 @@
   .map .map_inner img {
     width: 100%;
     height: auto;
+  }
+}
+@media screen and (max-height: 740px) {
+  .section__inner {
+    padding: 0 40px;
+  }
+  .section-full .scroller {
+    padding: 0px 30px 0 40px;
+  }
+  .fullpage-wrapper {
+    .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCSB_outside + .mCSB_scrollTools {
+      right: -21px;
+    }
+  }
+  .menu__top, .menu__bottom {
+    height: 40px;
+    padding: 0 40px;
+  }
+  .menu__left, .menu__right {
+   width: 40px;
+    top: 40px;
+    bottom: 40px;
+  }
+  .menu__left:after {
+    border-width: 40px 40px 0 0;
+  }
+  .menu__left:before {
+    border-width: 40px 0 0 40px;
+  }
+  .menu__right:after {
+    border-width: 0 40px 40px 0;
+  }
+  .menu__right:before {
+    border-width: 0 0 40px 40px;
+  }
+  .menu__left:before, .menu__right:before {
+    top: -60px;
+  }
+  .menu li {
+    font-size: 20px;
+  }
+  .menu .icon-panorama {
+    font-size: 22px;
+  }
+  .menu__left i, .menu__left i:before, .menu__left i:after {
+    width: 22px;
+  }
+  aside {
+    top: 40px;
+    bottom: 40px;
+    left: 40px;
+  }
+  aside menu,
+  aside ul li a {
+    font-size: 27px;
+  }
+  .lang {
+    font-size: 20px;
+  }
+  aside menu i, aside menu img {
+    margin-right: 20px;
+    width: 30px;
+    font-size: 24px;
+    top: 6px;
+  }
+  aside .scroller .mCSB_container {
+    padding: 54px 74px 50px 100px;
+  }
+
+
+  .section--intro__header {
+    padding-top: 80px;
+    padding-left: 40px;
+  }
+  .promo-text--left {
+    top: 40%;
+    left: 8%;
+    font-size: 14px;
+    .date {
+      font-size: 25px;
+    }
+  }
+  .promo-text--right {
+    font-size: 14px;
+    top: 28%;
+  }
+  .promo-text--bottom {
+    .text {
+      font-size: 15px;
+      line-height: 17px;
+    }
+  }
+  .section--intro__header h1 {
+    max-width: 330px;
+    font-size: 37px;
+    line-height: 37px;
   }
 }
