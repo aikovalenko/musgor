@@ -12,6 +12,7 @@
 @include fontFace('FuturaLightC','/fonts/futuralightc', 'normal');
 @include fontFace('FuturaLightC-Italic','/fonts/futuralightcitalic', 'italic');
 @include fontFace('icomoon','/fonts/icomoon', 'italic');
+@include fontFace('fontawesome','/fonts/fontawesome', 'normal');
 
 
 
@@ -715,11 +716,24 @@
       }
       .mfp-content-inner {
         overflow: hidden;
-        .photo {
+        .news-info {
           position: relative;
           width: 30%;
           height: 100%;
           float: left;
+        }
+        .constr-info {
+          position: relative;
+          width: 295px;
+          height: 100%;
+          float: left;
+          .news-info__share {
+            width: 165px;
+          }
+          .constr-info__inner {
+            position: fixed;
+            bottom: 60px;
+          }
         }
         .scroller-icon {
           position: absolute;
@@ -731,6 +745,12 @@
           overflow-x: hidden;
           height: 100%;
           padding-bottom: 100px;
+        }
+        h5 {
+          margin-bottom: 0;
+          font-weight: bold;
+          font-family: "FuturaDemiC";
+          font-size: 20px;
         }
         .text {
           height: 100%;
@@ -1071,5 +1091,174 @@
     max-width: 330px;
     font-size: 37px;
     line-height: 37px;
+  }
+}
+
+.social__btns {
+  margin-top: 15px;
+  margin-left: -3px;
+  ul li {
+    display: inline-block;
+  }
+  ul {
+    margin: 0;
+  }
+  a {
+    display: inline-block;
+    margin: 6px 3px;
+
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+    color: #a09e95;
+    font-size: 28px;
+    .i {
+      color: #a09e95;
+
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.news-info__cloud {
+  margin-top: 40px;
+  color: #a09e95;
+  font-size: 16px;
+  .cloud {
+    margin-top: 15px;
+  }
+  a {
+    color: #a09e95;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+.news-info__scroll {
+  overflow-y: auto;
+  height: 100%;
+  padding-bottom: 150px;
+}
+.scroll-down {
+  margin-top: 40px;
+  i {
+    color: #89a83c;
+    font-size: 15px;
+  }
+}
+.gallery--constr {
+  position: relative;
+  margin: 30px auto;
+  max-width: 725px;
+  img {
+    width: 100%;
+  }
+  .slick-arrow {
+    position: absolute;
+    font-family: 'icomoon'; speak: none; font-style: normal; font-weight: normal;
+    font-size: 0;
+    color: #a09d95;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: all .2s ease;
+    &:hover {
+      transition: all .2s ease;
+      color: #fff;
+    }
+  }
+  .slick-next {
+    right: -70px;
+    top: 50%;
+    margin-top: -14px;
+    transform: rotate(90deg);
+    &:before {
+      content: "\e906";
+      font-size: 20px;
+      //
+    }
+  }
+  .slick-prev {
+    left: -70px;
+    top: 50%;
+    margin-top: -14px;
+    transform: rotate(-90deg);
+    &:before {
+      content: "\e906";
+      font-size: 20px;
+
+    }
+  }
+}
+.ajax-modal .mfp-container .mfp-content .constr {
+  .constr-info {
+    position: fixed;
+  }
+  .text-scroll {
+    position: relative;
+    z-index: 2;
+    max-width: 885px;
+    margin: 0 auto;
+    //padding-bottom: 50px;
+    .text {
+      padding-left: 0;
+      padding-right: 60px;
+    }
+  }
+}
+.statistics {
+  p {
+    color: #89a83c !important;
+  }
+}
+@media screen and (max-width: 1340px) {
+  .ajax-modal .mfp-container .mfp-content .constr {
+    .constr-info {
+      position: static;
+      width: 200px;
+    }
+    .text-scroll {
+      max-width: 885px;
+      margin: 0;
+      //padding-bottom: 50px;
+      .text {
+        padding-left: 0;
+        padding-right: 60px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1180px) {
+  .gallery--constr {
+    position: relative;
+    .slick-next {
+      right: -35px;
+    }
+    .slick-prev {
+      left: -35px;
+    }
+  }
+}
+@media screen and (max-width: 1120px) {
+  .gallery--constr {
+    position: relative;
+    margin: 30px 30px;
+  }
+}
+.safari.os.x {
+  .map_inner {
+    height: 500px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .safari.os.x {
+    .map_inner {
+      height: 300px;
+    }
+  }
+  .map_inner {
+    height: 350px !important;
   }
 }

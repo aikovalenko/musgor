@@ -3,6 +3,7 @@
 //= ../libs/mCustomScrollbar/jquery.mCustomScrollbar.min.js
 //= ../libs/magnific-popup/dist/jquery.magnific-popup.min.js
 //= ../libs/slick-carousel/slick/slick.min.js
+//= ../libs/platform.js
 
 function setObjectsWidth() {
     var oW = $(".map-main").width();

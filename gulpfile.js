@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 	zip = require('gulp-zip'),
 	include = require('gulp-file-include'),
 	cleanCSS = require('gulp-clean-css'),
+    csscomb = require('gulp-csscomb'),
   cache = require('gulp-cache');
    
 
@@ -109,7 +110,8 @@ gulp.task('style:dist', function () {
 	gulp.src(path.src.style)
 		.pipe(sass())
 		.pipe(prefixer())
-		.pipe(cleanCSS())
+		// .pipe(cleanCSS())
+        .pipe(csscomb())
 		.pipe(gulp.dest(path.dist.css));
 });
 

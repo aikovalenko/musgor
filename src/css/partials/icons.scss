@@ -1,3 +1,4 @@
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -13,43 +14,61 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-up:before {
+.icon-ok:before {
   content: "\e900";
 }
-.icon-arrow-down:before {
+.icon-instagramm:before {
   content: "\e901";
 }
-.icon-contacts:before {
+.icon-google:before {
   content: "\e902";
 }
-.icon-feedback:before {
+.icon-livejournal:before {
   content: "\e903";
 }
-.icon-news:before {
+.icon-twitter:before {
   content: "\e904";
 }
-.icon-media:before {
+.icon-pinter:before {
   content: "\e905";
 }
-.icon-building:before {
+.icon-arrow-up:before {
   content: "\e906";
 }
-.icon-panorama:before {
+.icon-arrow-down:before {
   content: "\e907";
 }
-.icon-city:before {
+.icon-contacts:before {
   content: "\e908";
 }
-.icon-inst:before {
+.icon-feedback:before {
   content: "\e909";
 }
-.icon-youtube:before {
+.icon-news:before {
   content: "\e90a";
 }
-.icon-fb:before {
+.icon-media:before {
   content: "\e90b";
 }
-.icon-vk:before {
+.icon-building:before {
   content: "\e90c";
+}
+.icon-panorama:before {
+  content: "\e90d";
+}
+.icon-city:before {
+  content: "\e90e";
+}
+.icon-inst:before {
+  content: "\e90f";
+}
+.icon-youtube:before {
+  content: "\e910";
+}
+.icon-fb:before {
+  content: "\e911";
+}
+.icon-vk:before {
+  content: "\e912";
 }
 
