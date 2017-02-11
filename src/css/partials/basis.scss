@@ -376,17 +376,28 @@ form input, form textarea { border: 0; width: 100%; color: #fff; font-size: 25px
 
 .media-list { margin: 0 -25px; font-size: 0; }
 .media-list:after, .media-list:before { content: ""; display: table; clear: both; }
-.media-list li { float: none; width: 33.3333%; padding: 0 25px 50px; vertical-align: top; display: inline-block; line-height: normal !important; margin-top: 0 !important; }
+.media-list li { float: none; width: 33%; padding: 0 25px 50px; margin-bottom: 50px; vertical-align: top; display: inline-block; line-height: normal !important; margin-top: 0 !important; }
 .media-list li a { display: block; }
 //.media-list li a:hover .video-preview:after { background: url(/images/vm/1480_play_hover.png) no-repeat; }
 .media-list .video-preview { font-size: 0; position: relative; }
 //.media-list .video-preview:after { content: ''; background: url(/images/vm/1479_play.png) no-repeat; width: 67px; height: 67px; position: absolute; left: 0; right: 0; top: 50%; margin: 0 auto; margin-top: -33px; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
-.media-list .video-preview img { width: 100%; }
+.media-list .video-preview img { width: 100%;}
 .media-list .desc { position: relative; padding: 15px 52px 15px 18px; background: #5a5244; color: #bab19f; height: 80px; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
 .media-list .desc .title { font-size: 18px; font-weight: normal; display: block; color: #bab19f; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
 .media-list .desc .time { font-size: 16px; position: absolute; right: 8px; bottom: 6px; color: #bab19f !important; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
 .media-list a:hover .desc { background: #e1a71c; }
 .media-list a:hover .desc .title, .media-list a:hover .desc .time { color: #433d32; }
+
+.section__news {
+  .media-list { margin: 0 -45px; font-size: 0; }
+  .media-list:after, .media-list:before { content: ""; display: table; clear: both; }
+  .media-list li { float: none; width: 25%; padding: 0 45px 50px; margin-bottom: 50px; vertical-align: top; display: inline-block; line-height: normal !important; margin-top: 0 !important; }
+  .media-list li a { display: block; }
+  //.media-list li a:hover .video-preview:after { background: url(/images/vm/1480_play_hover.png) no-repeat; }
+  .media-list .video-preview { font-size: 0; position: relative; }
+  //.media-list .video-preview:after { content: ''; background: url(/images/vm/1479_play.png) no-repeat; width: 67px; height: 67px; position: absolute; left: 0; right: 0; top: 50%; margin: 0 auto; margin-top: -33px; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -ms-transition: all 0.2s ease; transition: all 0.2s ease; }
+  .media-list .video-preview img { width: 100%; max-width: 300px;}
+}
 
 @media (max-width: 1834px) { .collections-list ul li { width: 33.3333%; } }
 @media (max-width: 1480px) { .section-left .scroller .mCSB_container { padding: 120px 60px 100px 80px; }
@@ -424,7 +435,7 @@ form input, form textarea { border: 0; width: 100%; color: #fff; font-size: 25px
 .mfp-close { font-size: 46px; height: 60px !important; font-weight: 200; font-family: 'FuturaBookC', sans-serif; top: 0px !important; right: -60px !important; width: 60px !important; background: #5a5244; padding: 9px 15px !important; }
 //.mfp-close:before { content: '+'; font-size: 66px; line-height: 34px; display: inline-block; position: relative; left: -6px; top: 2px; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
 
-@media (max-width: 1200px) { .media-list li { width: 50%; } }
+@media (max-width: 1200px) { .media-list li { width: 50%; } .section__news .media-list li { width: 50%; } }
 @media (max-width: 1100px) { #ajax-content-list.show { padding: 100px 30px 50px 30px; } }
 @media (max-width: 1200px) { .intro .lead { font-size: 40px; padding: 0 10%; }
   .mfp-close { right: 0px !important; top: -60px !important; }

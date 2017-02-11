@@ -535,6 +535,7 @@
   background-size: cover;
   transition: .4s;
 }
+
 .video-preview {
  &:before {
    content: '';
@@ -553,6 +554,13 @@
   &:hover:before {
     opacity: 0;
     transition: .4s;
+  }
+}
+.section__news {
+  .video-preview {
+    &:before {
+      max-width: 300px;
+    }
   }
 }
 .up-down-animation {
@@ -1260,5 +1268,88 @@
   }
   .map_inner {
     height: 350px !important;
+  }
+}
+
+
+.ya-share2__icon {
+  display: none !important;
+}
+.ya-share2__container_size_m .ya-share2__item {
+  margin: 0 !important;
+  margin-right: 4px !important;
+}
+.ya-share2__item {
+  margin-right: 10px !important;
+  //font: normal normal normal 20px/1 FontAwesome !important;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  a {
+    display: flex !important;
+    height: 30px !important;
+    &:before {
+      display: table-cell;
+      vertical-align: middle;
+      color: #a09e95;
+      font-size: 28px;
+    }
+  }
+}
+.ya-share2__item_service_vkontakte {
+  a {
+    &:before {
+      content: "\e912";
+    }
+  }
+}
+.ya-share2__item_service_facebook {
+  a {
+    &:before {
+      content: "\e911";
+    }
+  }
+}
+.ya-share2__item_service_odnoklassniki {
+  a {
+    &:before {
+      content: "\e900";
+    }
+  }
+}
+.ya-share2__item_service_gplus {
+  a {
+    &:before {
+      content: "\e902";
+    }
+  }
+}
+.ya-share2__item_service_pinterest {
+  a {
+    &:before {
+      content: "\e905";
+    }
+  }
+}
+.ya-share2__item_service_twitter {
+  a {
+    &:before {
+      content: "\e904";
+    }
+  }
+}
+.ya-share2__item_service_lj {
+  a {
+    &:before {
+      content: "\e903";
+    }
   }
 }
