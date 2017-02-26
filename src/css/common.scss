@@ -182,6 +182,7 @@
     background: none;
     font-family: 'FuturaDemiC';
     color: #cfcdc3;
+    height: auto;
     .title {
       text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.27);
     }
@@ -669,6 +670,9 @@
     a:hover .date {
       color: #fff;
     }
+    li {
+      margin-bottom: 0;
+    }
   }
 }
 .media-list {
@@ -849,13 +853,21 @@
   .textarea-wrap {
     margin-bottom: 37px;
   }
-  input, textarea {
+  input, textarea, select {
     width: 100%;
     border: 2px solid #89a83c;
     background: transparent;
     border-radius: 10px;
     outline: none;
     transition: all .4s;
+  }
+  select {
+    height: 52px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'FuturaBookC', sans-serif;
+    font-weight: normal;
+    padding: 10px 15px;
   }
   .has-error {
     border: 2px solid red;
@@ -892,7 +904,11 @@
     }
 
   }
+  .mCSB_outside + .mCSB_scrollTools {
+    right: -2px !important;
+  }
 }
+
 #map {
   filter: grayscale(100%);
   &:before {
@@ -1434,4 +1450,9 @@
 {
   overflow: hidden;
   z-index: 9999;
+}
+@media screen and (max-height: 900px) {
+  .section__contacts .section__contacts__bottom {
+    margin-top: 50px;
+  }
 }
