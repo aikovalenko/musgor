@@ -369,65 +369,8 @@
                     <!--</div>-->
                   <!--</form>-->
 
-                  <script type="text/javascript">
-                      function custommsg() {
-                          document.getElementById("form-message").style.display="";
-                          document.getElementById("form-message").innerHTML="Thanks for your answers!";
-                          document.getElementById("form-container").style.display="none";
-                      }
-                      function validate() {
-                          var valid = true;
-                          return valid;
-                      }
-                      /*
-                      function validate(f) {
-                          var name =document.getElementById("entry_111826575").value;
-                          var email =document.getElementById("entry_111826575").value;
-                          var r = email.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/);
-                          var select =document.getElementById("entry_2146510212").value;
-                          var text =document.getElementById("entry_352979270").value;
 
-
-                          if ( name.length === 0 || select.length === 0 || !r || text.length === 0) {
-                              if ( name.length === 0) {
-                                 document.getElementById("entry_111826575").style.border="2px solid red";
-                              }
-                              if (!r){
-                                  document.getElementById("entry_600068427").style.border="2px solid red";
-                              }
-                              if ( select.length === 0 ) {
-                                  document.getElementById("entry_2146510212").style.border="2px solid red";
-                              }
-                              if ( text.length === 0) {
-                                  document.getElementById("entry_352979270").style.border="2px solid red";
-                              }
-//                              document.getElementById("entry_111826575").style.border="2px solid red";
-//                              document.getElementById("entry_600068427").style.border="2px solid red";
-//                              document.getElementById("entry_2146510212").style.border="2px solid red";
-//                              document.getElementById("entry_352979270").style.border="2px solid red";
-                              return false
-                          }
-                          else if ( name.length > 0) {
-                              document.getElementById("entry_111826575").style.border="2px solid green";
-                          }
-//                          if (!r){
-//                              document.getElementById("entry_600068427").style.border="2px solid red";
-//                              return false
-//                          }
-//                          if ( ) {
-//                              document.getElementById("entry_2146510212").style.border="2px solid red";
-//                              return false;
-//                          }
-//                          if ( text.length === 0) {
-//                              document.getElementById("entry_352979270").style.border="2px solid red";
-//                              return false;
-//                          }
-
-                          return true;
-                      }
-                      */
-                  </script>
-                  <div class="ss-form-container" style="display:none;" id="form-message"></div>
+                  <div class="ss-form-container" style="display:none;" id="form-message">Спасибо, Ваша заявка успешно принята. Мы свяжемся с Вами в ближайшее время | Thank you for the message, we'll try to answer as soon as possible.</div>
                   <div class="ss-form-container" id="form-container">
                     <form action="" method="POST" target="fake-target" onsubmit="this.action='https://docs.google.com/forms/d/e/1FAIpQLSdcpIRx2JJlqBiBBE7z5GWGv2q6QLhTGPpipHPDVkrB9YQKzQ'; if (validate(this)) {custommsg(); return true;} else return false;">
 
@@ -435,17 +378,17 @@
                         <div class="input-wrap">
                           <label for="entry_111826575">Ваше имя<span class="required"> *</span></label>
                           <div class="hint">Как к Вам обратиться в ответе</div>
-                          <input type="text" name="" value="" class="ss-q-short" id="entry_111826575" dir="auto" aria-required="true" required="" title="">
+                          <input type="text" name="" value="" class="ss-q-short" id="entry_111826575" dir="auto" aria-required="true"  title="">
                         </div>
                         <div class="input-wrap">
                           <label for="entry_600068427">Адрес электронной почты<span class="required"> *</span></label>
                           <div class="hint">Ваш e-mail, на который будет выслан ответ. Строго в формате: adress@domen.ru</div>
-                          <input type="text" name="entry.600068427" value="" class="ss-q-short" id="entry_600068427" dir="auto" aria-required="true" required="" title="">
+                          <input type="text" name="entry.600068427" value="" class="ss-q-short" id="entry_600068427" dir="auto" aria-required="true"  title="">
                         </div>
                         <div class="input-wrap">
                           <label for="entry_2146510212">Тема сообщения<span class="required"> *</span></label>
                           <div class="hint">Благодарность, вопрос, жалоба, поиск информации, запрос на изображение</div>
-                          <select name="entry.2146510212" id="entry_2146510212" aria-required="true" required="" class="required"><option value=""></option>
+                          <select name="entry.2146510212" id="entry_2146510212" aria-required="true"  class="required"><option value=""></option>
                             <option value="письмо в Пресс-службу">письмо в Пресс-службу</option>
                             <option value="отзыв по проведению строительных работ">отзыв по проведению строительных работ</option>
                             <option value="другое">другое</option>
@@ -456,12 +399,10 @@
                         <div class="input-wrap textarea-wrap">
                           <label for="entry_352979270">Текст Вашего сообщения<span class="required"> *</span></label>
                           <div class="hint">Администрация оставляет за собой право не отвечать на некорректные вопросы</div>
-                          <textarea name="entry.352979270" rows="10" cols="0" class="ss-q-long" id="entry_352979270" dir="auto" required="" aria-required="true" ></textarea>
+                          <textarea name="entry.352979270" rows="10" cols="0" class="ss-q-long" id="entry_352979270" dir="auto"  aria-required="true" ></textarea>
                         </div>
                         <button type="submit">Отправить</button>
                       </div>
-
-
                     </form>
                   </div>
                   <iframe id="fake-target" name="fake-target" style="display:none;"></iframe>

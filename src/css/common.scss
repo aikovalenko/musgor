@@ -771,6 +771,7 @@
           float: left;
           padding-left: 50px;
           padding-right: 250px;
+          padding-bottom: 100px;
 
           h4 {
             font-size: 28px;
@@ -868,6 +869,9 @@
     font-family: 'FuturaBookC', sans-serif;
     font-weight: normal;
     padding: 10px 15px;
+    option {
+      color: #000;
+    }
   }
   .has-error {
     border: 2px solid red;
@@ -1019,6 +1023,21 @@
   .map .map_inner img {
     width: 100%;
     height: auto;
+  }
+}
+
+@media only screen
+and (min-device-width: 100px)
+and (min-width: 100px) {
+  .map .map_inner img {
+    top: 31%;
+  }
+}
+@media only screen
+and (min-device-width: 500px)
+and (min-width: 500px) {
+  .map .map_inner img {
+    top: 0;
   }
 }
 @media screen and (max-height: 740px) {
@@ -1455,4 +1474,53 @@
   .section__contacts .section__contacts__bottom {
     margin-top: 50px;
   }
+}
+
+#search input.invalid {
+  background: #eb6e7c;
+}
+.search-results {
+  h4 {
+    margin-bottom: 40px;
+    .t {
+      color: #a09e95;
+    }
+    .input {
+
+    }
+  }
+  ul {
+    li {
+      margin-bottom: 32px;
+    }
+    a {
+      font-family: "FuturaDemiC";
+      font-size: 22px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .date {
+      margin-top: 0 !important;
+    }
+    p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+.search-results__inner {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+@media screen and (min-width: 1800px) {
+  .search-results__inner {
+    width: 63%;
+  }
+}
+
+.constr-info .news-info__cloud {
+  margin-bottom: 30px;
+  width: 165px;
 }
